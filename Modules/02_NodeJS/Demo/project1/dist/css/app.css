@@ -1,0 +1,93 @@
+﻿/* CPT Colors: { Red: #9F1B30, Orange: 	6:00 PM 1/29/2017Yellow: #FEBF0F } */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: orange;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 8px;
+  line-height: 1em;
+}
+
+ul {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+#page-container{
+  max-width: 1024px;
+  margin: auto;
+  background-color: white;
+  min-height: 600px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid black;
+}
+
+#banner {
+  height: 48px;
+  padding: 0px;
+  color: white;
+  background-color: black;
+}
+
+#app-icon {
+  float: left;
+  height: 47px;
+  width: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(img/AppIcon.png);
+}
+
+#app-title {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+  height: 48px;
+  padding-left: 16px;
+  font-size: 24px;
+}
+
+#top-nav {
+  float: right;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-right: 16px;
+  padding-left: 0px;
+}
+
+  #top-nav ul {
+    line-height: 1em;
+    margin-bottom: 0px;
+  }
+
+
+  #top-nav ul li {
+    display: inline-block;
+    margin-right: 4px;
+    color: #FEBF0F;
+  }
+
+    #top-nav li a, #top-nav li a:visited, #top-nav li a:active {
+      color: #FEBF0F;
+      text-decoration: none;
+    }
+
+
+#content-body {
+  padding: 8px;
+  padding-left: 16px;
+}

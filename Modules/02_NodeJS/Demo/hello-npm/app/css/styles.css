@@ -1,0 +1,30 @@
+.testing {
+  display: flex;
+  width: 55.55556%; }
+
+body {
+  background-color: slategrey;
+  margin: 0;
+  padding: 0;
+  font-size: 1.75em; }
+
+#page-container {
+  max-width: 760;
+  padding: 0px;
+  margin: auto;
+  background-color: white;
+  min-height: 480px; }
+  #page-container h2 {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 8px; }
+  #page-container p {
+    margin: 12px;
+    color: #888; }
+  #page-container ul {
+    margin: 8px; }
+  #page-container li {
+    font-size: 0.8em;
+    margin-top: 4px;
+    color: #444; }

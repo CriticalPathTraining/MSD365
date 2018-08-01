@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>D3 Demo</title>
+  <meta charset="utf-8" />
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link href="css/app.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="banner">
+    <div id="app-icon"></div>
+    <div id="top-nav" class="hidden-xs">
+      <ul>
+        <li><span class="fa fa-user" /></li>
+        <li><a href="#">Walter White</a></li>
+        <li><span class="fa fa-caret-down" /></li>
+      </ul>
+    </div>
+    <div id="app-title">
+      D3 Demo<span id="visualName"></span>
+    </div>
+  </div>
+
+  <div id="left-nav" class="navigationPane navigationPaneCollapsed">
+    <div id="left-nav-body">
+      <div class="leftNavSection">
+        <div id="left-nav-toggle">
+          <div class="leftNavIcon fa fa-bar-chart"></div>
+          <div class="leftNavTitle leftNavItem leftNavHide">Visual Picker</div>
+        </div>
+        <ul id="visualPickerMenu" class="leftNavMenu leftNavItem leftNavHide"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-body" class="contentBody contentBodyNavigationCollapsed">
+    <div id="viz" />
+  </div>
+
+  <script src="js/vendor.bundle.js"></script>
+  <script src="js/bundle.js"></script>
+
+</body>
+</html>

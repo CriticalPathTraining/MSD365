@@ -1,0 +1,45 @@
+// Scss
+.testing {
+  display: flex;
+  width: percentage(5/9);
+  // Percentage is a Sass function that will be evaluated to CSS when compiled
+}
+
+
+body{
+    background-color: slategrey;
+    margin: 0;
+    padding: 0;
+    font-size: 1.75em;
+}
+
+#page-container{
+  max-width: 760;
+  padding: 0px;
+  margin: auto;
+  background-color: white;
+  min-height: 480px;
+
+  h2{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 8px;    
+  }
+
+  p{
+    margin: 12px;
+    color: #888;
+  }
+
+  ul{
+    margin: 8px;
+  }
+
+  li{
+    font-size: 0.8em;
+    margin-top: 4px;
+    color: #444;    
+  }
+
+}
