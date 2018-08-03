@@ -33,12 +33,12 @@ var quoteManager = function () {
     { "value": "I haven't spoken to my wife in years. I didn't want to interrupt her.", "author": "Rodney Dangerfield" },
     { "value": "You know you have a drinking problem when the bartender knows your name -- and you've never been to that bar before.", "author": "Zach Galifianakis" },
     { "value": "No man has a good enough memory to be a successful liar", "author": "Abraham Lincoln" },
-    { "value": "I love deadlines. I like to whooshing sounds they make as they fly by.", "author": "Douglas Adams" }
+    { "value": "I love deadlines. I like the whooshing sounds they make as they fly by.", "author": "Douglas Adams" }
   ];
 
   return {
     getQuote: function () {
-      var index = Math.floor(Math.random()*quotes.length);
+      var index = Math.floor(Math.random() * quotes.length);
       console.log("Getting quote " + index)
       return quotes[index];
     }
