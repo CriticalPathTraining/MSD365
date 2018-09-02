@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ICustomer from '../../models/ICustomer';
-import ICustomerService from '../../models/ICustomerService';
+import ICustomersService from '../../models/ICustomersService';
 import MockCustomersService from "./../../services/MockCustomersService";
 import CustomersToolbar from './CustomersToolbar'
 import CustomersTable from './CustomersTable';
@@ -11,7 +11,7 @@ type CustomerViewType = 'table' | 'cards';
 
 interface ViewCustomersState {
   viewType: CustomerViewType;
-  customerService: ICustomerService;
+  customerService: ICustomersService;
   customers: ICustomer[];
   loading: boolean;
 }

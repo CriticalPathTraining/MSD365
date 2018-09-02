@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import ViewCustomers from './ViewCustomers'
 import ICustomer from '../../models/ICustomer';
-import ICustomerService from '../../models/ICustomerService';
+import ICustomersService from '../../models/ICustomersService';
 
 import './CustomersToolbar.css';
 
@@ -36,7 +36,7 @@ export default class CustomersToolbar extends React.Component<CustomersToolbarPr
               <button type="button" key={letter} className="btn btn-sm btn-secondary"
                 onClick={() => {
                   (document.getElementById('searchbox') as HTMLInputElement).value = letter;
-                  let customerService: ICustomerService = this.props.ViewCustomers.state.customerService;
+                  let customerService: ICustomersService = this.props.ViewCustomers.state.customerService;
                   customerService.getCustomersByLastName(letter).then((customers: ICustomer[]) => {
                     this.props.ViewCustomers.setState({ customers: customers, loading: false });
                   });
@@ -52,7 +52,7 @@ export default class CustomersToolbar extends React.Component<CustomersToolbarPr
             </div>
             <input id="searchbox" type="text" className="form-control form-control-sm" placeholder=""
               onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                let customerService: ICustomerService = this.props.ViewCustomers.state.customerService;
+                let customerService: ICustomersService = this.props.ViewCustomers.state.customerService;
                 let searchString: string = event.target.value;
                 if (searchString != "") {
                   customerService.getCustomersByLastName(searchString).then((customers: ICustomer[]) => {

@@ -1,8 +1,8 @@
 import ICustomer from "./../models/ICustomer"
 import ICustomerDetail from "../models/ICustomerDetail";
-import ICustomerService from "../models/ICustomerService";
+import ICustomersService from "../models/ICustomersService";
 
-export default class MockCustomersService implements ICustomerService {
+export default class MockCustomersService implements ICustomersService {
 
   getCustomers(): Promise<ICustomer[]> {
 

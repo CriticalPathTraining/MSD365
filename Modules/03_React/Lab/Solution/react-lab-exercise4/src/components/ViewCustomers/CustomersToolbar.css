@@ -7,11 +7,11 @@
   margin-right: 16px;
 }
 
-  .customers-toolbar .customers-menu {
+  .customers-toolbar .filter-menu {
     padding: 0px;
   }
   
-  .customers-toolbar .customers-menu button {
+  .customers-toolbar .filter-menu button {
     padding-left: 8px;
     padding-right: 8px;
   }  

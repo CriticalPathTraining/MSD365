@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ICustomer from '../../models/ICustomer';
-import ICustomerService from '../../models/ICustomerService';
+import ICustomerService from '../../models/ICustomersService';
 import MockCustomersService from "./../../services/MockCustomersService";
 import CustomersService from "./../../services/CustomersService";
 import CustomersToolbar from './CustomersToolbar'

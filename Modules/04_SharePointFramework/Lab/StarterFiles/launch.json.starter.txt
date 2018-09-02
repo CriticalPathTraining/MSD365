@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Local workbench",
+            "type": "chrome",
+            "request": "launch",
+            "url": "https://localhost:4321/temp/workbench.html",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ]
+        }
+    ]
+}
