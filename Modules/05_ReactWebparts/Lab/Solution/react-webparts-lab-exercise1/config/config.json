@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "classy-banner-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/classyBanner/ClassyBannerWebPart.js",
+          "manifest": "./src/webparts/classyBanner/ClassyBannerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ClassyBannerWebPartStrings": "lib/webparts/classyBanner/loc/{locale}.js"
+  }
+}

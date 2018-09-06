@@ -1,0 +1,107 @@
+import ILead from "../models/ILead";
+import IList from "../models/IList";
+import ILeadsService from "../models/ILeadsService";
+
+export default class MockLeadsService implements ILeadsService {
+
+  public getLeads(targetList: string): Promise<ILead[]> {
+    return Promise.resolve(this.leads);
+  }
+
+  public getLeadsLists(): Promise<IList[]> {
+    return Promise.resolve(this.lists);
+  }
+
+  private lists: IList[] = [
+    { id: "list01", title: "Northern Leads" },
+    { id: "list02", title: "Southern Leads" }
+  ];
+
+  private leads: ILead[] = [
+    {
+      "Id": "1",
+      "FirstName": "Darwin",
+      "LastName": "Collins",
+      "Company": "Trioptimum Corp",
+      "EmailAddress": "Darwin.Collins@TrioptimumCorp.com"
+    },
+    {
+      "Id": "2",
+      "FirstName": "Jason",
+      "LastName": "Nolan",
+      "Company": "Zorg Industries",
+      "EmailAddress": "Jason.Nolan@ZorgIndustries.com"
+    },
+    {
+      "Id": "3",
+      "FirstName": "Jermaine",
+      "LastName": "Ormand",
+      "Company": "Umbrella Corp",
+      "EmailAddress": "Jermaine.Morton@UmbrellaCorp.com"
+    },
+    {
+      "Id": "4",
+      "FirstName": "Peggy",
+      "LastName": "Brennan",
+      "Company": "Zorin Industries",
+      "EmailAddress": "Peggy.Brennan@ZorinIndustries.com"
+    },
+    {
+      "Id": "5",
+      "FirstName": "Jordan",
+      "LastName": "Gutierrez",
+      "Company": "Kwik-E-Mart",
+      "EmailAddress": "Jordan.Gutierrez@Kwik-E-Mart.com"
+    },
+    {
+      "Id": "6",
+      "FirstName": "Chrystal",
+      "LastName": "Santiago",
+      "Company": "Crudgington Brewery",
+      "EmailAddress": "Chrystal.Santiago@CrudgingtonBrewery.com"
+    },
+    {
+      "Id": "7",
+      "FirstName": "Kasey",
+      "LastName": "Quinne",
+      "Company": "ComTron",
+      "EmailAddress": "Kasey.Morgan@ComTron.com"
+    },
+    {
+      "Id": "8",
+      "FirstName": "Kris",
+      "LastName": "Knox",
+      "Company": "Crudgington Brewery",
+      "EmailAddress": "Kris.Knox@CrudgingtonBrewery.com"
+    },
+    {
+      "Id": "9",
+      "FirstName": "Waylon",
+      "LastName": "Parks",
+      "Company": "New York Inquirer",
+      "EmailAddress": "Waylon.Parks@NewYorkInquirer.com"
+    },
+    {
+      "Id": "10",
+      "FirstName": "Glenda",
+      "LastName": "Yack",
+      "Company": "Grim Reaper Airways",
+      "EmailAddress": "Glenda.Montoya@GrimReaperAirways.com"
+    },
+    {
+      "Id": "11",
+      "FirstName": "Margo",
+      "LastName": "Zuckerberg",
+      "Company": "Liandri Mining Corp",
+      "EmailAddress": "Margo.McMahon@LiandriMiningCorp.com"
+    },
+    {
+      "Id": "12",
+      "FirstName": "Kitty",
+      "LastName": "Akers",
+      "Company": "VersaLife Corporation",
+      "EmailAddress": "Kitty.Herrera@VersaLifeCorporation.com"
+    }
+  ];
+
+}
