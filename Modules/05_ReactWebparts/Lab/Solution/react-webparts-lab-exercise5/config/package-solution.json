@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-webparts-lab-client-side-solution",
+    "id": "b3f26466-39e2-4d8f-8d87-f4133b34163e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/react-webparts-lab.sppkg"
+  }
+}
