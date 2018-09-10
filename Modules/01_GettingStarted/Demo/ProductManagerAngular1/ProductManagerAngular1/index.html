@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Manager NG</title>
+  <link href="/Content/bootstrap.css" rel="stylesheet" />
+  <link href="App/app.css" rel="stylesheet" />
+  <!-- required by Angular routing -->
+  <base href="/">
+</head>
+
+<body ng-app="myApp">
+
+  <!-- add top here navbar -->
+  <div class="container">
+    <div class="navbar navbar-default " role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Product Manager Angular</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/products">Products List</a></li>
+            <li><a href="/products/showcase">Product Showcase</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add main body content here -->
+  <div class="container">
+    <div class="container-fluid">
+      <div id="content-box" ng-view></div>
+    </div>
+  </div>
+
+  <!-- Add script links to 3rd party libraries -->
+  <script src="Scripts/jquery-3.1.1.js"></script>
+  <script src="Scripts/bootstrap.js"></script>
+  <script src="Scripts/angular.js"></script>
+  <script src="Scripts/angular-route.js"></script>
+
+  <!-- Add script links to internal JS files -->
+  <script src="App/app.js"></script>
+  <script src="App/models/product.js"></script>
+  <script src="App/services/services.js"></script>
+  <script src="App/filters/filters.js"></script>
+  <script src="App/components/components.js"></script>
+  <script src="App/controllers/controllers.js"></script>
+
+</body>
+</html>

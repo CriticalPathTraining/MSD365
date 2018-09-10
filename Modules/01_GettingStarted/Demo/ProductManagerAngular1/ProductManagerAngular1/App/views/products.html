@@ -1,0 +1,28 @@
+﻿<p>
+  <a class="btn btn-primary" href="/products/add">Create Product</a>
+</p>
+
+<table id="products-table" class="table table-striped table-hover table-responsive ">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th class="hidden-sm hidden-xs">Category</th>
+      <th class="hidden-sm hidden-xs">List Price</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="product in vm.products">
+    <tr>
+      <td>{{product.Id}}</td>
+      <td>{{product.Name}}</td>
+      <td class="hidden-sm hidden-xs">{{product.Category}}</td>
+      <td class="hidden-sm hidden-xs">{{product.ListPrice | currency }}</td>
+      <td><a href="/products/view/{{product.Id}}" class="navbar-link">View</a></td>
+      <td><a href="/products/edit/{{product.Id}}" class="navbar-link">Edit</a></td>
+      <td><a href="" ng-click="vm.deleteProduct(product.Id)" class="navbar-link">Delete</a></td>
+    </tr>
+  </tbody>
+</table>

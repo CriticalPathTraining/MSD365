@@ -1,0 +1,72 @@
+﻿<h3>Update Product</h3>
+
+<form name="thisForm" novalidate ng-submit="thisForm.$valid && vm.updateProduct()">
+  <div class="form-horizontal">
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="Name">Name:</label>
+      <div class="col-md-10">
+        <input id="Name" name="Name" type="text" ng-model="vm.product.Name" required class="form-control text-box single-line" />
+        <div class="text-danger" ng-show="thisForm.Name.$invalid && (thisForm.Name.$dirty || thisForm.$submitted)">
+          <span ng-show="thisForm.Name.$error.required">Name is a required field</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="Name">Category:</label>
+      <div class="col-md-10">
+        <select class="form-control selectpicker" ng-model="vm.product.Category" required id="Category" name="Category">
+          <option value="" disabled selected>--- select a product category ---</option>
+          <option ng-repeat="category in vm.productCategories" ng-value="category">{{category}}</option>
+        </select>
+        <div class="text-danger" ng-show="thisForm.Category.$invalid && (thisForm.Category.$dirty || thisForm.$submitted)">
+          <span ng-show="thisForm.Category.$error.required">Category is a required field</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="ListPrice">List Price:</label>
+      <div class="col-md-10">
+        <input id="ListPrice" name="ListPrice" type="number" class="form-control" ng-model="vm.product.ListPrice" required min="1" max="10000" step="any">
+        <div class="text-danger" ng-show="thisForm.ListPrice.$invalid && (thisForm.ListPrice.$dirty || thisForm.$submitted)">
+          <span ng-show="thisForm.ListPrice.$error.required">List price is a required field</span>
+          <span ng-show="thisForm.ListPrice.$error.number">List price must be a number</span>
+          <span ng-show="thisForm.ListPrice.$error.min || thisForm.ListPrice.$error.max">
+            List price must be between $1 and $10,000
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="Description">Description:</label>
+      <div class="col-md-10">
+        <textarea name="Description" rows="3" class="form-control" ng-model="vm.product.Description" required />
+        <div class="text-danger" ng-show="thisForm.Description.$invalid && (thisForm.Description.$dirty || thisForm.$submitted)">
+          <span ng-show="thisForm.Description.$error.required">Description is a required field</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="Description">Product Image:</label>
+      <div class="col-md-10">
+        <input name="ProductImageUrl" class="form-control" ng-model="vm.product.ProductImageUrl" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Update" class="btn btn-primary" ng-disabled="!thisForm.$dirty" />
+      </div>
+    </div>
+
+  </div>
+</form>
+
+<p>
+  <a href="/products" >Back to products list</a>
+</p>

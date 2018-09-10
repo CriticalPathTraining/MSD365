@@ -1,0 +1,37 @@
+﻿<div class="row">
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-left">
+
+      <!-- sidebar nav -->
+      <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
+        <product-navigation />
+      </div>
+
+      <!-- main area -->
+      <div class="col-xs-12 col-sm-10">
+        <div class="col-lg-4 col-md-5 col-sm-6" ng-repeat="product in vm.products">
+          <div class="panel panel-primary productPanel">
+            <div class="panel-heading">{{product.Name}}</div>
+            <div class="panel-body">
+              <img ng-src="/Content/ProductImages/{{product.ProductImageUrl}}" class="product-image" />
+              <p class="text-info">{{product.Description}}</p>
+              <div class="" style="clear: both;">
+                <table class="table">
+                  <tr>
+                    <td>Category:</td>
+                    <td>{{product.Category}}</td>
+                  </tr>
+                  <tr>
+                    <td>List Price:</td>
+                    <td>{{product.ListPrice | currency }}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

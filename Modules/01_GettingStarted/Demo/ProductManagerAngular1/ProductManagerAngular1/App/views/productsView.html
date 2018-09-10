@@ -1,0 +1,26 @@
+﻿<h3>View Product</h3>
+
+<div>
+  <dl class="dl-horizontal">
+
+    <dt>Name</dt>
+    <dd ng-bind="vm.product.Name"></dd>
+
+    <dt>Category</dt>
+    <dd ng-bind="vm.product.Category"></dd>
+
+    <dt>List Price</dt>
+    <dd ng-bind="vm.product.ListPrice | listPrice"></dd>
+
+    <dt>Description</dt>
+    <dd ng-bind="vm.product.Description"></dd>
+
+    <dt>Product Image</dt>
+    <dd><img ng-src="{{'/Content/ProductImages/' + vm.product.ProductImageUrl}}" alt="Product Image" width="120" /></dd>
+
+  </dl>
+</div>
+<p>
+  <a href="/products" class="btn btn-link" >Back to products list</a> | 
+  <a href="/products/edit/{{vm.product.Id}}" class="btn btn-link">Edit this product</a>
+</p>

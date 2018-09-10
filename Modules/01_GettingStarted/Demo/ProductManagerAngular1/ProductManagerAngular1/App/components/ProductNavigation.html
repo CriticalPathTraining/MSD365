@@ -1,0 +1,10 @@
+﻿<nav id="left-nav" class="navbar" role="navigation">
+  <div id="left-nav-title">Filter by Category</div>
+  <ul class="nav navbar-nav">
+    <li class="nav navbar-link"><a href="/products/showcase/">All Categories</a></li>
+    <li class="nav navbar-link" ng-repeat="category in $ctrl.productCategories">
+      <a href="/products/showcase/?category={{category}}">{{category}}</a>
+    </li>
+  </ul>
+</nav>
+

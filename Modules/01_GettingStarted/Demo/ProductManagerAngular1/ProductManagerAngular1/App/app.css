@@ -1,0 +1,88 @@
+﻿.navbar {
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-top: 4px;
+  color: #339;
+}
+
+input, select, textarea {
+  width: 280px;
+  max-width: 280px;
+}
+
+  input.ng-touched.ng-invalid, 
+  select.ng-touched.ng-invalid, 
+  textarea.ng-touched.ng-invalid {
+    border: solid 1px red;
+    background-color: #FFC;
+  }
+
+.text-danger {
+  margin-top: 4px;
+}
+
+.form-control[readonly] {
+  background-color: #FFD;
+}
+
+dl {
+  border: 1px solid #BBB;
+  background-color: #EEE;
+}
+
+dt {
+  padding: 4px;
+}
+
+dd {
+  border: 1px solid #BBB;
+  background-color: white;
+  padding: 4px;
+}
+
+.form-horizontal {
+  border: 1px solid #BBB;
+  border-radius: 8px;
+  background-color: #EEE;
+  padding: 4px;
+  padding-top: 16px;
+  margin-bottom: 12px;
+}
+
+.productPanel {
+  height: 200px;
+}
+
+.panel-body {
+  font-size: 0.9em;
+}
+
+
+.product-image {
+  float: right;
+  width: 56px;
+}
+
+#left-nav {
+  background-color: #F3F3F3;
+  border: 1px solid #444;
+  padding-bottom: 4px;
+}
+
+#left-nav-title {
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+
+
+#left-nav li > a {
+  padding: 4px;
+  padding-left: 12px;
+}
+
+  #left-nav li > a:first-child {
+    padding-top: 12px;
+  }
