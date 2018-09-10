@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "customer-search-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/customerSearch/CustomerSearchWebPart.js",
+          "manifest": "./src/webparts/customerSearch/CustomerSearchWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CustomerSearchWebPartStrings": "lib/webparts/customerSearch/loc/{locale}.js"
+  }
+}

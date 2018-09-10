@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "title": "Global Navigation",
+    "name": "global-navigation",
+    "id": "c6bbeb95-a296-4b4f-a96e-4c72a6177687",
+    "version": "1.0.0.0",
+    "iconPath": "assets/AppIcon.png",
+    "includeClientSideAssets": true,
+    "features": [
+      {
+        "title": "Global Navigation Demo.",
+        "description": "Deploys a global navigation menu",
+        "id": "bd47ddfa-fa90-4072-a71f-90de3e71b45b",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/global-navigation.sppkg"
+  }
+}

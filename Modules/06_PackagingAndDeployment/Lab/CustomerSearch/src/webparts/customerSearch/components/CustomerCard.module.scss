@@ -1,0 +1,33 @@
+.customerCard {
+  margin: 4px;
+  padding: 0px;
+  border: 1px #888 solid;
+  display: inline-block;
+  width: 176px;
+  height: 72px;
+  background-color: lightyellow;
+
+  .customerCard:hover {
+    border: 2px solid darkred;
+    background-color: lightyellow;
+  }
+
+  .cardHeader {
+    font-size: 1.0em;
+    padding: 2px;
+    padding-left: 4px;
+    background-color: black;
+    color: white;
+  }
+
+  .cardBody {
+    padding: 4px;
+    font-size: 0.75em;
+    max-height: 40px;
+  }
+
+  .cardText {
+    color: black;
+  }
+
+}

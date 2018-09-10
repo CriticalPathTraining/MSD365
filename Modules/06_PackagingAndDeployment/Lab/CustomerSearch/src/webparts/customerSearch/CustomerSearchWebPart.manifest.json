@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "1457c38d-cfb9-463a-9ad1-92a4c33e8a11",
+  "alias": "CustomerSearchWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "MSD365 Webparts"
+      },
+      "title": {
+        "default": "Customer Search"
+      },
+      "description": {
+        "default": "A webpart to search for customers"
+      },
+      "officeFabricIconFontName": "Search",
+      "properties": {}
+    }
+  ]
+}

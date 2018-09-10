@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="GlobalNavigation"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="40327344-9731-4137-9a47-1c2ebf8812cf"
+        ClientSideComponentProperties="{&quot;menuTitle&quot;:&quot;Global Nav Menu&quot;}">
+    </CustomAction>
+</Elements>

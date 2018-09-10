@@ -1,0 +1,44 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+
+.globalNavigationMenu {
+    @include ms-bgColor-themeDarker;
+      padding: 2px;
+      padding-left: 8px; 
+      display: flex;
+      align-items: center;
+      justify-content: left;    
+      border-bottom: 1px solid #333;
+
+      .menuTitle {
+        @include ms-font-m-plus;
+        @include ms-fontColor-white;
+        margin-right: 8px;    
+      }
+
+      i {
+        @include ms-font-l;
+        @include ms-fontColor-white;   
+        margin-right: 4px; 
+        margin-left: 4px; 
+      }
+
+      a {
+        @include ms-bgColor-themeDark;
+        @include ms-font-m;
+        @include ms-fontColor-yellowLight;   
+        margin-right: 4px;
+        margin-left: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-bottom: 2px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+      }
+
+      a:hover {
+        @include ms-fontColor-yellow;   
+      }
+
+}
