@@ -1,0 +1,24 @@
+﻿@model SharePointOnlineWebClient.Models.ADALTokenCache
+
+<div class="row">
+
+  <h3>Token Cache for Logged-on User</h3>
+
+  <table class="table table-bordered table-striped" >
+    <thead>
+      <tr>
+        <td>Resource</td>
+        <td>IsMultipleResourceRefreshToken</td>
+      </tr>
+    </thead>
+    @foreach (var item in Model.ReadItems()) {
+      <text>
+        <tr>
+          <td>@item.Resource</td>
+          <td>@item.</td>
+        </tr>
+      </text>
+    }
+  </table>
+
+</div>

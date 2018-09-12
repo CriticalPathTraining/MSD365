@@ -1,0 +1,30 @@
+﻿@model System.Security.Claims.ClaimsPrincipal
+
+<h2>Claims Principal - Curent User</h2>
+
+
+<h4>Identity Properties</h4>
+<table class="table table-bordered table-striped table-condensed">
+  <tr>
+    <td style="width:200px;">Name</td>
+    <td>@Model.Identity.Name</td>
+  </tr>
+  <tr>
+    <td>IsAuthenticated</td>
+    <td>@Model.Identity.IsAuthenticated</td>
+  </tr>
+  <tr>
+    <td>AuthenticationType</td>
+    <td>@Model.Identity.AuthenticationType</td>
+  </tr>
+</table>
+
+<h4>User Claims</h4>
+<table class="table table-bordered table-striped table-condensed">
+  @foreach (var claim in @Model.Claims) {
+    <tr>
+      <td style="width:200px;">[@claim.Type]</td>
+      <td>@claim.Value</td>
+    </tr>
+  }
+</table>

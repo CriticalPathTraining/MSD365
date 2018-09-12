@@ -1,0 +1,56 @@
+﻿@model MicrosoftGraphWebApp.Models.SiteResponse
+
+@{ MicrosoftGraphWebApp.Models.SiteResponse Site = Model; }
+
+<h2>Manage Site</h2>
+
+<table class="table table-sm table-bordered table-striped">
+  <tr>
+    <td>Site Title</td>
+    <td>@Site.displayName</td>
+  </tr>
+
+  <tr>
+    <td>Site ID</td>
+    <td>@Site.id</td>
+  </tr>
+  <tr>
+    <td>Host Name</td>
+    <td>@Site.siteCollection.hostname</td>
+  </tr>
+  <tr>
+    <td>Web Url</td>
+    <td>@Site.webUrl</td>
+  </tr>
+  <tr>
+    <td>Created</td>
+    <td>@Site.createdDateTime.ToShortDateString()</td>
+  </tr>
+  <tr>
+    <td>Last Modified</td>
+    <td>@Site.lastModifiedDateTime.ToShortDateString()</td>
+  </tr>
+</table>
+
+<h3>Lists</h3>
+
+<table class="table table-sm table-bordered table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Display Name</th>
+    <th>list.hidden</th>
+    <th>Web Url</th>
+  </tr>
+  @foreach (var list in Site.lists) {
+  <tr>
+    <td>@list.id</td>
+    <td>@list.name</td>
+    <td>@list.displayName</td>
+    <td>@list.list.hidden</td>
+    <td><a href="@list.webUrl" target="_blank" class="nav-link navbar-nav">Navigate</a></td>
+  </tr>
+  }
+
+
+</table>
