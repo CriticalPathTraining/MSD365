@@ -1,0 +1,22 @@
+﻿@model List<MicrosoftGraphWebApp.Models.ApplicationResponse>
+
+@{ List<MicrosoftGraphWebApp.Models.ApplicationResponse> Applications = Model; }
+
+<h2>Azure AD Applications</h2>
+
+<table class="table table-sm table-bordered table-striped">
+  <tr>
+    <th>Display Name</th>
+    <th>Application Type</th>
+    <th>ImplicitFlow</th>
+    <th>Application ID</th>
+  </tr>
+  @foreach (var application in Applications) {
+  <tr>
+    <td>@application.displayName</td>
+    <td>@( (application.isFallbackPublicClient.HasValue && application.isFallbackPublicClient.Value) ? "Native" : "Web app / API" )</td>
+    <td>@( application.web.oauth2AllowImplicitFlow.HasValue ? application.web.oauth2AllowImplicitFlow : false )</td>
+    <td>@application.appId</td>
+  </tr>
+  }
+</table>

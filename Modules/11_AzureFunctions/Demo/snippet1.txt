@@ -1,0 +1,34 @@
+using System.Net;
+ 
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log) {
+    try {
+        log.Info("Executing function");
+ 
+        // Get query string and request body
+        var queryPairs = req.GetQueryNameValuePairs();
+        dynamic data = await req.Content.ReadAsAsync<object>();
+ 
+        string path = queryPairs?.FirstOrDefault(
+            q => string.Compare(q.Key, "path", true) == 0
+        ).Value;
+        path = path ?? data?.path.ToString();
+ 
+        string siteUrl = queryPairs?.FirstOrDefault(
+            q => string.Compare(q.Key, "siteUrl", true) == 0
+        ).Value;
+        siteUrl = siteUrl ?? data?.siteUrl.ToString();
+ 
+        Uri itemUri = new Uri (new Uri (siteUrl), path);
+ 
+        return itemUri == null
+            ? req.CreateResponse(HttpStatusCode.BadRequest,
+                                "Please pass a path on the query string or request body"
+                                + req.RequestUri)
+            : req.CreateResponse(HttpStatusCode.OK, itemUri.AbsoluteUri);
+    }
+    catch (Exception ex)
+    {
+        string message = ex.Message + "\n" + ex.StackTrace;
+        return req.CreateResponse(HttpStatusCode.BadRequest, "ERROR: " + message);
+    }
+}
