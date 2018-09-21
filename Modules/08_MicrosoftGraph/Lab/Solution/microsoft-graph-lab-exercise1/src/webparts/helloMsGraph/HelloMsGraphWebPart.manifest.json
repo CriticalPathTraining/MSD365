@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "ff7e5dd3-20d9-4a50-ab14-59861c8340f7",
+  "id": "e7429f12-1575-4f1e-83f3-50cbda5bd0cf",
   "alias": "HelloMsGraphWebPart",
   "componentType": "WebPart",
   "version": "*",
@@ -19,9 +19,7 @@
         "default": "A simple demo webpart using the Microsoft Graph API"
       },
       "officeFabricIconFontName": "TestUserSolid",
-      "properties": {
-        "description": "HelloMSGraph"
-      }
+      "properties": {}
     }
   ]
 }

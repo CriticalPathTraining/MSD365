@@ -1,6 +1,14 @@
 import * as React from 'react';
 import styles from './HelloMsGraph.module.scss';
 import { IHelloMsGraphProps } from './IHelloMsGraphProps';
+import { escape } from '@microsoft/sp-lodash-subset';
+
+import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
+
+import {
+  Persona,
+  PersonaSize
+} from 'office-ui-fabric-react/lib/components/Persona';
 
 export interface IHelloMsGraphState {
   name: string;
@@ -9,45 +17,14 @@ export interface IHelloMsGraphState {
   image: string;
 }
 
-import { MSGraphClient } from '@microsoft/sp-http';
-import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
-
-import {
-  Persona,
-  PersonaSize
-} from 'office-ui-fabric-react/lib/components/Persona';
-
-import { Link } from 'office-ui-fabric-react/lib/components/Link';
-
 export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IHelloMsGraphState> {
 
-  constructor(props: IHelloMsGraphProps) {
-    super(props);
-
-    this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      image: null
-    };
-  }
-
-  private _renderMail = () => {
-    if (this.state.email) {
-      return <Link href={`mailto:${this.state.email}`}>{this.state.email}</Link>;
-    } else {
-      return <div />;
-    }
-  }
-
-  private _renderPhone = () => {
-    if (this.state.phone) {
-      return <Link href={`tel:${this.state.phone}`}>{this.state.phone}</Link>;
-    } else {
-      return <div />;
-    }
-  }
-
+  public state = {
+    name: "",
+    email: "",
+    phone: "",
+    image: ""
+  };
 
   public render(): React.ReactElement<IHelloMsGraphProps> {
     return (
@@ -61,11 +38,11 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
             </ul>
           )}
           imageUrl={this.state.image}
-          size={PersonaSize.size100} />
+          size={PersonaSize.size100}
+        />
       </div>
     );
   }
-
   public componentDidMount(): void {
 
     this.props.graphClient

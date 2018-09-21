@@ -1,18 +1,23 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-
+import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
+import * as strings from 'HelloMsGraphWebPartStrings';
 import HelloMsGraph from './components/HelloMsGraph';
 import { IHelloMsGraphProps } from './components/IHelloMsGraphProps';
 
 import { MSGraphClient } from '@microsoft/sp-http';
 
-export default class HelloMsGraphWebPart extends BaseClientSideWebPart<any> {
+export interface IHelloMsGraphWebPartProps {
+  description: string;
+}
+
+export default class HelloMsGraphWebPart extends BaseClientSideWebPart<IHelloMsGraphWebPartProps> {
 
   public render(): void {
     this.context.msGraphClientFactory
@@ -26,8 +31,34 @@ export default class HelloMsGraphWebPart extends BaseClientSideWebPart<any> {
       });
   }
 
+
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
+  protected get dataVersion(): Version {
+    return Version.parse('1.0');
+  }
+
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+    return {
+      pages: [
+        {
+          header: {
+            description: strings.PropertyPaneDescription
+          },
+          groups: [
+            {
+              groupName: strings.BasicGroupName,
+              groupFields: [
+                PropertyPaneTextField('description', {
+                  label: strings.DescriptionFieldLabel
+                })
+              ]
+            }
+          ]
+        }
+      ]
+    };
+  }
 }

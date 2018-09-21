@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "microsoft-graph-lab",
-    "id": "e708732a-1fab-4204-8c47-ceda6eb6a731",
+    "id": "87508a93-1a2c-4146-8494-dd90eae306f3",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,

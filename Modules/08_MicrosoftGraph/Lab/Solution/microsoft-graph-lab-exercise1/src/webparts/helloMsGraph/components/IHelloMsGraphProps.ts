@@ -1,6 +1,4 @@
-import {
-  MSGraphClient
-} from '@microsoft/sp-http';
+import { MSGraphClient } from '@microsoft/sp-http';
 
 export interface IHelloMsGraphProps {
   graphClient: MSGraphClient;
