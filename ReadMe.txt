@@ -1,1 +1,0 @@
-The student files for this training course will be posted here in this GitHub repo before the first delivery of this class which is Sept 10, 2018.
