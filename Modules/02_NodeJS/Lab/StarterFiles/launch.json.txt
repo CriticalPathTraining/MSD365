@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "outFile": "./dist/scripts/app.js",
-    "sourceMap": true,
-    "lib": [ "dom", "es6" ]
-  },
-  "files": [
-    "./src/scripts/app.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Local Debugging Session",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/",
+            "webRoot": "${workspaceRoot}/dist",
+            "sourceMaps": true,
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ]
+        }
+    ]
 }
