@@ -1,0 +1,22 @@
+﻿@model List<MicrosoftGraphWebApp.Models.SiteResponse>
+
+@{ List<MicrosoftGraphWebApp.Models.SiteResponse> Sites = Model; }
+
+<h2>Sites</h2>
+
+<table class="table table-sm table-bordered table-striped">
+  <tr>
+    <th>Site Collection</th>
+    <th>ID</th>
+    <th></th>
+    <th></th>
+  </tr>
+  @foreach (var site in Sites) {
+  <tr>
+    <td>@site.displayName</td>
+    <td><a href="@site.webUrl" target="_blank">@site.webUrl</a></td>
+    <td><a href="/Site/?id=@site.id" class="nav-link">Manage Site</a></td>
+  </tr>
+  }
+
+</table>
