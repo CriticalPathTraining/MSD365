@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-ms-graph-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloMsGraph/HelloMsGraphWebPart.js",
+          "manifest": "./src/webparts/helloMsGraph/HelloMsGraphWebPart.manifest.json"
+        }
+      ]
+    },
+    "user-viewer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/userViewer/UserViewerWebPart.js",
+          "manifest": "./src/webparts/userViewer/UserViewerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloMsGraphWebPartStrings": "lib/webparts/helloMsGraph/loc/{locale}.js",
+    "UserViewerWebPartStrings": "lib/webparts/userViewer/loc/{locale}.js"
+  }
+}
