@@ -1,0 +1,31 @@
+﻿body {
+  width: 1024px;
+  margin: auto;
+  background-color: lightblue;
+}
+
+.page-content{
+  margin-top: 24px;
+  background-color: white;
+  height: 400px;
+  padding: 24px;
+  padding-top: 4px;
+  border-radius: 12px;
+}
+
+
+  .page-content h2 {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .page-content form div {
+    margin-top: 8px;
+  }
+
+#message {
+  font-size: 48px;
+  color: darkblue;
+}
