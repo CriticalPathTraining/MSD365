@@ -1,0 +1,67 @@
+﻿<!--  Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+        See LICENSE in the source repository root for complete license information. -->
+
+@model GraphWebhooks.Models.SubscriptionViewModel
+
+@{
+    ViewBag.Title = "Subscription";
+}
+
+<h2>Subscription</h2>
+@if (Model != null)
+{
+    <p>The following subscription was successfully created.</p>
+    <div>
+        <table class="table table-sm">
+            <tr>
+                <th scope="row">
+                    @Html.LabelFor(m => m.Subscription.Resource)
+                </th>
+                <td>
+                    <code>@Model.Subscription.Resource</code>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.LabelFor(m => m.Subscription.ChangeType)
+                </th>
+                <td>
+                    <code>@Model.Subscription.ChangeType</code>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.LabelFor(m => m.Subscription.ClientState)
+                </th>
+                <td>
+                    <code>@Model.Subscription.ClientState</code>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.LabelFor(m => m.Subscription.Id)
+                </th>
+                <td>
+                    <code>@Model.Subscription.Id</code>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    @Html.LabelFor(m => m.Subscription.ExpirationDateTime)
+                </th>
+                <td>
+                    <code>@Model.Subscription.ExpirationDateTime</code>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+<br />
+<div>
+    <p>Choose <b>Watch for notifications</b> and then send an email to your user. The <b>Notifications</b> page will display metadata for new messages.</p>
+    @using (Html.BeginForm("LoadView", "Notification"))
+    {
+        <button type="submit" class="btn btn-primary">Watch for notifications</button>
+    }
+</div>
+

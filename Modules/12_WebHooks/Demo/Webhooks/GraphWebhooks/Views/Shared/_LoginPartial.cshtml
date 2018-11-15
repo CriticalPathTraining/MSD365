@@ -1,0 +1,17 @@
+﻿<ul class="navbar-nav justify-content-end">
+    @if (Request.IsAuthenticated)
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name</a>
+            <div class="dropdown-menu">
+                @Html.ActionLink("Sign Out", "SignOut", "Account", new { area = "" }, new { @class = "dropdown-item" })
+            </div>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            @Html.ActionLink("Sign In", "SignIn", "Account", new { area = "" }, new { @class = "nav-link" })
+        </li>
+    }
+</ul>
