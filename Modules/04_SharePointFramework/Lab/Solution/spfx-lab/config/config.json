@@ -1,13 +1,18 @@
 {
-  "entries": [
-    {
-      "entry": "./lib/webparts/walmartGreeter/WalmartGreeterWebPart.js",
-      "manifest": "./src/webparts/walmartGreeter/WalmartGreeterWebPart.manifest.json",
-      "outputPath": "./dist/walmart-greeter.bundle.js"
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "walmart-greeter-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/walmartGreeter/WalmartGreeterWebPart.js",
+          "manifest": "./src/webparts/walmartGreeter/WalmartGreeterWebPart.manifest.json"
+        }
+      ]
     }
-  ],
+  },
   "externals": {},
   "localizedResources": {
-    "walmartGreeterStrings": "webparts/walmartGreeter/loc/{locale}.js"
+    "WalmartGreeterWebPartStrings": "lib/webparts/walmartGreeter/loc/{locale}.js"
   }
 }
