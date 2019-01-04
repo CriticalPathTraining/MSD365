@@ -1,19 +1,21 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-extension-lab-client-side-solution",
-    "id": "2674a7fa-e677-4a3b-b5a3-f984435b37e2",
+    "name": "spfx-extension-lab",
+    "id": "e48c97c5-6c0e-4213-8f5c-c3d5bf1b31c4",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
     "features": [
       {
         "title": "Application Extension - Deployment of custom action.",
         "description": "Deploys a custom action with ClientSideComponentId association",
-        "id": "370f3eb1-bed0-4596-8124-b30330897f89",
+        "id": "bc0a2b74-4118-4893-b95a-2eee9cc43f4b",
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
-            "elements.xml"
+            "elements.xml",
+            "clientsideinstance.xml"
           ]
         }
       }
