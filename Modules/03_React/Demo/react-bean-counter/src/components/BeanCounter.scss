@@ -1,0 +1,33 @@
+
+#bean-counter{
+  margin: 24px;
+  width: 300px;
+  padding: 0px;
+  border-radius: 2px;
+  border: 1px solid black;
+  .title {
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    padding: 4px;
+    padding-left: 8px;
+  }
+  .toolbar {
+    background-color: #888;
+    padding: 8px;
+    padding-bottom: 8px;
+    button {
+      border-radius: 4px;
+      font-size: 18px;
+      width: 100%;
+    }    
+  }
+  .display {
+    font-size: 18px;
+    padding: 12px;
+    background-color: orange;
+    color: darkblue;
+    text-align: center;
+    font-weight: bold;
+  }
+}

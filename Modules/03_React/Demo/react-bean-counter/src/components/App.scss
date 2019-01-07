@@ -1,0 +1,71 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $ms-color-themeLight;
+}
+
+#app-container{
+  @include ms-Fabric;
+  @include ms-Grid;
+  background-color: white;
+  min-height: 600px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid ;
+  @include ms-borderColor-neutralPrimaryAlt;
+  max-width: 1024px;
+  margin: auto;
+}
+
+#banner-row {
+  @include ms-Grid-row;
+}
+
+
+#banner {
+  @include ms-Grid-col;
+  @include ms-font-xxl;
+  @include ms-fontColor-white;  
+  @include ms-sm12;
+  @include ms-md12;
+  @include  ms-lg12;
+  height: 48px;
+  background-image: url('./../images/AppIcon.png');
+  background-repeat: no-repeat;
+  background-color: $ms-color-themeDarker;
+  border-bottom: 1px solid $ms-color-themeDarker;
+  padding: 4px;
+  padding-left: 56px;
+
+  h2 {
+    margin-bottom: 0px;
+  }
+}
+
+#content-body-row {
+  @include ms-Grid-row;
+}
+
+#content-body {
+  @include ms-Grid-col;
+  @include ms-font-xl;
+  @include ms-lg12;
+  @include ms-fontColor-themePrimary;
+  padding: 8px;
+
+  h1, h2, h3 {
+    margin: 4px;
+  }
+
+  p {
+    @include ms-fontColor-neutralPrimary;
+    margin: 4px;
+  }
+
+  .reactImage {
+    @include ms-fadeIn500;
+  }
+
+}
