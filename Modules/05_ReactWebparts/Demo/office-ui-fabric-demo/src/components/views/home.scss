@@ -1,0 +1,23 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+#home  {
+  color: darkblue;
+
+h1, h2, h3, h4 {
+  @include ms-font-l;
+  @include ms-fontColor-white;    
+  background-color: $ms-color-themeDark;
+  text-align: center;
+  padding: 2px;
+  margin: 0px;
+  margin-top: 8px;
+}
+
+.heading-body {
+  @include ms-font-s;
+  @include ms-fontColor-white;    
+  background-color: $ms-color-themeLight;
+  @include ms-fontColor-themePrimary;
+}
+
+}

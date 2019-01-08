@@ -1,0 +1,98 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $ms-color-themeLight;
+}
+
+#app-container{
+  @include ms-Fabric;
+  @include ms-Grid;
+  @include ms-borderColor-neutralPrimaryAlt;
+  background-color: white;
+  min-height: 600px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 1px solid ;
+  max-width: 1024px;
+  margin: auto;
+}
+
+#banner-row, #topnav, #content-body-row {
+  @include ms-Grid-row;
+}
+
+
+#banner {
+  @include ms-Grid-col;
+  @include ms-font-xxl;
+  @include ms-fontColor-white;  
+  @include ms-sm12;
+  @include ms-md12;
+  @include  ms-lg12;
+  height: 48px;
+  background-image: url('./../images/AppIcon.png');
+  background-repeat: no-repeat;
+  background-color: $ms-color-themeDarker;
+  border-bottom: 1px solid $ms-color-themeDarker;
+  padding: 4px;
+  padding-left: 56px;
+
+  h2 {
+    margin-bottom: 0px;
+  }
+}
+
+#content-body-row {
+  @include ms-Grid-row;
+}
+
+
+#leftnav {
+  @include ms-Grid-col;
+  @include ms-font-xl;
+  @include ms-sm1;
+  @include ms-md3;
+  @include ms-lg2;
+  @include ms-fontColor-themePrimary;
+  font-size: ms-font-sm;
+
+  padding: 8px;
+  border-right: 1px solid #AAA;
+  min-height: 600px;
+  ul {
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+    li a {
+      font-size: ms-font-sm
+    }
+  }
+}
+
+#content-body {
+  @include ms-Grid-col;
+  @include ms-font-xl;
+  @include ms-sm8;
+  @include ms-md9;
+  @include ms-lg10;
+  @include ms-fontColor-themePrimary;
+  padding: 8px;
+  padding-left: 16px; 
+
+  h1, h2, h3, h4 {
+    margin: 4px;
+    color: $ms-color-themeDarker;
+    border-bottom: 1px solid $ms-color-themeDarker;
+  }
+
+  p {
+    @include ms-fontColor-neutralPrimary;
+    margin: 4px;
+  }
+
+  .reactImage {
+    @include ms-fadeIn500;
+  }
+
+}
