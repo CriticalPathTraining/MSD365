@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.3/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "id": "4e1bb2e4-4af3-e2e8-8a13-5d9b07a48b43",
+  "version": "0.0.1",
+  "packageName": "io.ngrok.tbd",
+  "developer": {
+    "name": "Maxwell Smart",
+    "websiteUrl": "https://tbd.ngrok.io",
+    "privacyUrl": "https://tbd.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://tbd.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "Teams App 1",
+    "full": "Teams App 1 - Hello Teams Tabs"
+  },
+  "description": {
+    "short": "This is my short description here",
+    "full": "This is my full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://6a9f216f.ngrok.io/teamsApp1TabConfig.html",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "6a9f216f.ngrok.io"
+  ]
+}
