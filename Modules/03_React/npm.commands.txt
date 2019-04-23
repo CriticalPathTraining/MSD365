@@ -1,0 +1,9 @@
+
+npm install
+
+npm run start
+
+npm install react @types/react --save-dev
+
+npm install react-dom @types/react-dom --save-dev
+
