@@ -1,0 +1,27 @@
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+.leadTracker {
+    border: 1px solid #333;
+
+    .loadingContainer {
+        background-image: url('../../../assets/loading.gif');
+        background-position: center;
+        background-position-y: 100px;
+        background-repeat: no-repeat;
+        font-size: 24px;
+        color: red;
+      }
+    
+      .messageContainer {
+        color: blue;
+        font-size: 18px;
+        
+      }
+    
+      .loadingContainer, .messageContainer  {
+        height: 240px;
+        padding: 24px;
+        border: 1px solid black;
+        text-align: center;
+      }
+}

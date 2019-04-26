@@ -4,12 +4,11 @@ import { ILeadTrackerProps } from './ILeadTrackerProps';
 import { ILeadTrackerState } from './ILeadTrackerState';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import ILead from '../../../models/ILead';
-import IList from '../../../models/IList';
-import ILeadsService from '../../../models/ILeadsService';
-import MockLeadsService from '../../../services/MockLeadsService';
+import ILead from '../../../models/ILead'
+import IList from '../../../models/IList'
+import ILeadsService from '../../../models/ILeadsService'
+import MockLeadsService from '../../../services/MockLeadsService'
 import SharePointLeadsService from '../../../services/SharePointLeadsService';
-
 
 import {
   DetailsList,
@@ -27,8 +26,9 @@ const leadColumns: IColumn[] = [
 
 export default class LeadTracker extends React.Component<ILeadTrackerProps, ILeadTrackerState> {
 
-  private leadsService: ILeadsService =
-    new SharePointLeadsService(this.props.spHttpClient, this.props.siteUrl);
+  //private leadsService: ILeadsService = new MockLeadsService();
+  private leadsService: ILeadsService = 
+          new SharePointLeadsService(this.props.spHttpClient, this.props.siteUrl);
 
   public state: ILeadTrackerState = {
     targetList: this.props.targetListDefault,
@@ -49,9 +49,10 @@ export default class LeadTracker extends React.Component<ILeadTrackerProps, ILea
     );
   }
 
-  public componentDidMount() {
+  componentDidMount() {
     this.leadsService.getLeads(this.state.targetList).then((leads: ILead[]) => {
       this.setState({ leads: leads });
-    });
-  }
+    })
+  }  
+  
 }

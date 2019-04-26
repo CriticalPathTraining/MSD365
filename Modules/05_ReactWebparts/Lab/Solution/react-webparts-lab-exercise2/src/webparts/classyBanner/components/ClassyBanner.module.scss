@@ -31,18 +31,6 @@
       border-radius: 6px;
   }
 
-  .bodyContent {
-    margin-left: 16px;
-  }
-  
-  .bodyContent p {
-    color: black;
-  }
-  
-  .bodyContent p i {
-    margin-right: 8px;
-  }
-  
   .image {
     height: 120px;
     @include ms-Grid-col;
@@ -50,7 +38,20 @@
     background-color: red;
     border-left: 1px solid black;
     background: url('./BannerImage.jpg');
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
   }
+
+  .bodyContent {
+    margin-left: 16px;
+  }
+    
+  .bodyContent p {
+    color: black;
+  }
+    
+  .bodyContent p i {
+    margin-right: 8px;
+  }
+  
 
 }

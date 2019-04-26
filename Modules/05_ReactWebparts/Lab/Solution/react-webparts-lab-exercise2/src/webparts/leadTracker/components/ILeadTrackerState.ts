@@ -1,4 +1,4 @@
 export interface ILeadTrackerState {
-  targetList: string;
-  loading: boolean;
-}
+    targetList: string;
+    loading: boolean;
+}  

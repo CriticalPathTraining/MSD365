@@ -50,5 +50,6 @@ export default class LeadTracker extends React.Component<ILeadTrackerProps, ILea
     this.leadsService.getLeads(this.state.targetList).then((leads: ILead[]) => {
       this.setState({ leads: leads });
     })
-  }
+  }  
+  
 }

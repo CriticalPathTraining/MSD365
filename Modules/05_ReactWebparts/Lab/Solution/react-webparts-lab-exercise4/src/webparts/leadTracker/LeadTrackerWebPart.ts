@@ -1,12 +1,13 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
+import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {
-  BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-webpart-base';
+} from '@microsoft/sp-property-pane';
 
+import * as strings from 'LeadTrackerWebPartStrings';
 import LeadTracker from './components/LeadTracker';
 import { ILeadTrackerProps } from './components/ILeadTrackerProps';
 
@@ -30,34 +31,38 @@ export default class LeadTrackerWebPart extends BaseClientSideWebPart<ILeadTrack
     );
     this.leadTracker = <LeadTracker>ReactDom.render(element, this.domElement);
   }
-
+  
+  
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
   protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
     super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
-    console.log("onPropertyPaneFieldChanged");
     if (propertyPath === 'targetList' && newValue) {
-      console.log("target list updated: " + newValue);
       this.leadTracker.setState({ targetList: newValue });
     }
+  }
+  
+
+  protected get dataVersion(): Version {
+    return Version.parse('1.0');
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
-        {
-          header: { description: "List Tracker Properties" },
-          groups: [{
-            groupName: "Data source",
-            groupFields: [
-              PropertyPaneTextField('targetList', { label: "Target List" })
-            ]
-          }
+        { header: { description: "List Tracker Properties" },
+          groups: [ {
+              groupName: "Data source",
+              groupFields: [
+                PropertyPaneTextField('targetList', { label: "Target List"})
+              ]
+            }
           ]
         }
       ]
     };
   }
+  
 }

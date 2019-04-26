@@ -21,6 +21,7 @@ export default class ClassyBanner extends React.Component<any, any> {
                   Developing with SPFx is the key to my future!
                 </p>
               </div>
+
             </div>
             <div className={styles.image} />
           </div>

@@ -1,27 +1,21 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "926117eb-c284-4bda-ae56-fafb36437d1d",
+  "id": "c03b7155-2fda-49a1-83b2-5c33af104828",
   "alias": "ClassyBannerWebPart",
   "componentType": "WebPart",
   "version": "*",
   "manifestVersion": 2,
   "requiresCustomScript": false,
-  "preconfiguredEntries": [
-    {
-      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
-      "group": {
-        "default": "Other"
-      },
-      "title": {
-        "default": "Classy Banner"
-      },
-      "description": {
-        "default": "a classy banner"
-      },
-      "officeFabricIconFontName": "News",
-      "properties": {
-        "description": "ClassyBanner"
-      }
-    }
-  ]
+  "supportedHosts": ["SharePointWebPart"],
+  "loadLegacyFabricCss": true,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "Classy Banner" },
+    "description": { "default": "a classy banner webpart" },
+    "officeFabricIconFontName": "News",
+    "properties": {}
+  }]
 }
+
+
