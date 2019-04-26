@@ -3,7 +3,7 @@
     <ClientSideComponentInstance
         Title="MyFirstExtension"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ComponentId="ba1d8c10-b693-4939-94f3-f93d50ec56a1"
+        ComponentId="7c228d0f-82b4-47a7-b6e5-2318b1006a16"
         Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </ClientSideComponentInstance>
 </Elements>

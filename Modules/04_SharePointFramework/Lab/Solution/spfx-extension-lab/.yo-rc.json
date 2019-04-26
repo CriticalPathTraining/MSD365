@@ -2,10 +2,11 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.7.1",
+    "version": "1.8.1",
     "libraryName": "spfx-extension-lab",
-    "libraryId": "e48c97c5-6c0e-4213-8f5c-c3d5bf1b31c4",
+    "libraryId": "7fc3b0c1-0155-4b0e-802e-9a3bff0b7e63",
     "packageManager": "npm",
+    "isDomainIsolated": false,
     "componentType": "extension",
     "extensionType": "ApplicationCustomizer"
   }
