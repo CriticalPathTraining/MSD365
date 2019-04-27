@@ -10,20 +10,20 @@ import {
   PersonaSize
 } from 'office-ui-fabric-react/lib/components/Persona';
 
-export interface IHelloMsGraphState {
-  name: string;
-  email: string;
-  phone: string;
-  image: string;
+export interface IHelloMsGraphState {   
+  name: string;   
+  email: string;   
+  phone: string;   
+  image: string; 
 }
 
 export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IHelloMsGraphState> {
 
-  public state = {
-    name: "",
-    email: "",
-    phone: "",
-    image: ""
+  public state = {   
+    name: '',   
+    email: '',   
+    phone: '',   
+    image: '' 
   };
 
   public render(): React.ReactElement<IHelloMsGraphProps> {
@@ -31,7 +31,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
       <div className={styles.HelloMSGraph} >
         <Persona primaryText={this.state.name}
           secondaryText='Personal Details:'
-          onRenderTertiaryText={() => (
+          onRenderTertiaryText={ () => (
             <ul>
               <li>email: {this.state.email}</li>
               <li>Phone: {this.state.phone}</li>
@@ -43,6 +43,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
       </div>
     );
   }
+  
   public componentDidMount(): void {
 
     this.props.graphClient
@@ -54,7 +55,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
           phone: user.businessPhones[0]
         });
       });
-
+  
     this.props.graphClient
       .api('/me/photo/$value')
       .responseType('blob')
@@ -63,5 +64,6 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
         this.setState({ image: blobUrl });
       });
   }
-
+  
+  
 }

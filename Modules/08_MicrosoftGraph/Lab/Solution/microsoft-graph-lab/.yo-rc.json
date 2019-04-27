@@ -2,10 +2,11 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.6.0",
+    "version": "1.8.1",
     "libraryName": "microsoft-graph-lab",
-    "libraryId": "87508a93-1a2c-4146-8494-dd90eae306f3",
+    "libraryId": "836911a8-acb0-41b5-9e5a-a8ff16b77d56",
     "packageManager": "npm",
+    "isDomainIsolated": false,
     "componentType": "webpart"
   }
 }
