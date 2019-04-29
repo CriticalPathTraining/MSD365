@@ -1,0 +1,36 @@
+﻿body {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  margin: 0;
+  height: 32px;
+  border: 2px solid black;
+  font-size: 28px;
+  padding-left: 40px;
+  background-image: url(./img/AppIcon.png);
+  background-repeat: no-repeat;
+}
+
+table, table td {
+  border-collapse: collapse
+}
+
+table td {
+  padding: 4px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#tab-content {
+  margin: 0;
+  padding: 16px;
+  padding-top: 12px;
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

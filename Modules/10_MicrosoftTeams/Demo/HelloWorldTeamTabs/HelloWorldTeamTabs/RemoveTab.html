@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tab Remove</title>
+  <link href="app/app.css" rel="stylesheet" />
+
+  <script type="text/javascript">
+
+    microsoftTeams.initialize();
+    microsoftTeams.settings.setValidityState(true);
+
+    microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+      removeEvent.notifySuccess();
+    });
+
+  </script>
+
+</head>
+<body>
+
+  <h1>Remove Tab</h1>
+
+  <div  id="tab-content">
+    Good bye cruel world.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "version": "1.0.0",
+  "id": "00000000-0000-0000-0000-000000000042",
+  "packageName": "ctp.helloWorldTeamsTabs",
+  "developer": {
+    "name": "Stu Dent",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Hello World",
+    "full": "Hello World Tabs for Microsoft Teams"
+  },
+  "description": {
+    "short": "Hello World Tabs for Microsoft Teams",
+    "full": "This sample app provides a very simple app for Microsoft Teams Tabs."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "ctp.helloWorldTeamsTabs.statictab1",
+      "name": "Hello Tab 1",
+      "contentUrl": "https://f5faab98.ngrok.io/StaticTab1.html",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "ctp.helloWorldTeamsTabs.statictab2",
+      "name": "Hello Tab 2",
+      "contentUrl": "https://f5faab98.ngrok.io/StaticTab2.html",
+      "scopes": [
+        "personal"
+      ]
+    }
+
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://f5faab98.ngrok.io/Configure.html",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "permissions": [],
+  "validDomains": [
+    "www.google.com",
+    "www.bing.com"
+  ]
+}

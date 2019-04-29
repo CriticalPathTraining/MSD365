@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tab Configuration</title>
+  <link href="app/app.css" rel="stylesheet" />
+  <script src="Scripts/jquery-3.3.1.js"></script>
+  <script src="Scripts/MicrosoftTeams.js"></script>
+
+</head>
+<body>
+
+  <h1>Dynamic Tab Configuration</h1>
+
+  <div id="tab-content">
+    <p>Selct a background color for your tab</p>
+    <form>
+      <input type="radio" name="backgroundColor" value="blue" onclick="onClick()">Blue Background<br>
+      <input type="radio" name="backgroundColor" value="green" onclick="onClick()">Green Background
+    </form>
+
+  </div>
+
+  <script src="Scripts/MicrosoftTeams.js"></script>
+
+  <script type="text/javascript">
+
+    var baseUrl = "https://f5faab98.ngrok.io/"
+
+    microsoftTeams.initialize();
+    microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+
+      var radios = document.getElementsByName("backgroundColor");
+      if (radios[0].checked) {
+        microsoftTeams.settings.setSettings({
+          entityId: "bluepage",
+          contentUrl: baseUrl + "DynamicTab.html?backgroundColor=lightblue",
+          suggestedTabName: "Blue Page",
+          removeUrl: baseUrl + "RemoveTab.html"
+        });
+      } else {
+        microsoftTeams.settings.setSettings({
+          entityId: "greenpage",
+          contentUrl: baseUrl + "DynamicTab.html?backgroundColor=lightgreen",
+          suggestedTabName: "Green Page",
+          removeUrl: baseUrl + "RemoveTab.html"
+        });
+      }
+
+      saveEvent.notifySuccess();
+    });
+
+    function onClick() {
+      microsoftTeams.settings.setValidityState(true);
+    }
+
+  </script>
+</body>
+</html>
