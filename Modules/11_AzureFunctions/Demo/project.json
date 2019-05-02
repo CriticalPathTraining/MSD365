@@ -1,0 +1,13 @@
+{
+"frameworks": {
+    "net46":{
+        "dependencies": {
+            "Microsoft.Graph": "1.15.0" ,
+            "Microsoft.Graph.Core": "1.15.0",
+            "Microsoft.IdentityModel.Clients.ActiveDirectory": "4.5.1",
+            "Newtonsoft.Json": "12.0.2",
+            "System.ValueTuple": "4.5.0"  
+            }
+        }
+    }
+}
