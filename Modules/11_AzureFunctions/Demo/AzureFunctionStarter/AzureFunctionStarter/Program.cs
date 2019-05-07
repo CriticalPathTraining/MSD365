@@ -19,8 +19,8 @@ namespace AzureFunctionStarter {
       string aadAuthorizationTenantEndpoint = aadAuthorizationRoot + tenantId + "/";
       var authenticationContext = new AuthenticationContext(aadAuthorizationTenantEndpoint);
 
-      string applicationId = "36953f9d-4f91-4ce7-9e61-9f4d8d9b2b5f";
-      string applicationPassword = "N9A*Z7zwFODA:0*s7jUV_D@i@-S:M*b4";
+      string applicationId = "2b2879d1-77d8-46d9-9cbc-64dbb662fc90";
+      string applicationPassword = "+kkska1yDsZ.H04t=Vm_l5_JCD8b3oi5";
       string resourceIdMicrosoftGraph = "https://graph.microsoft.com";
       
       var clientCredential = new ClientCredential(applicationId, applicationPassword);
