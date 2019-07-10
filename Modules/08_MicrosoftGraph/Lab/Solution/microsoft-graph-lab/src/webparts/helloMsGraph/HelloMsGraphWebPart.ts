@@ -1,5 +1,8 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+
+import { MSGraphClient } from '@microsoft/sp-http';
+
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {
@@ -10,8 +13,6 @@ import {
 import * as strings from 'HelloMsGraphWebPartStrings';
 import HelloMsGraph from './components/HelloMsGraph';
 import { IHelloMsGraphProps } from './components/IHelloMsGraphProps';
-
-import { MSGraphClient } from '@microsoft/sp-http';
 
 export interface IHelloMsGraphWebPartProps {
   description: string;
@@ -30,6 +31,7 @@ export default class HelloMsGraphWebPart extends BaseClientSideWebPart<IHelloMsG
         ReactDom.render(element, this.domElement);
       });
   }
+  
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);

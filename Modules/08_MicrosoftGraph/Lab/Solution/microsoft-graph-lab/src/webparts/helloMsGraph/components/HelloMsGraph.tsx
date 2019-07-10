@@ -10,22 +10,24 @@ import {
   PersonaSize
 } from 'office-ui-fabric-react/lib/components/Persona';
 
-export interface IHelloMsGraphState {   
-  name: string;   
-  email: string;   
-  phone: string;   
-  image: string; 
+export interface IHelloMsGraphState {
+  name: string;
+  email: string;
+  phone: string;
+  image: string;
 }
 
+
+
 export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IHelloMsGraphState> {
-
-  public state = {   
-    name: '',   
-    email: '',   
-    phone: '',   
-    image: '' 
+ 
+  public state = {
+    name: '',
+    email: '',
+    phone: '',
+    image: ''
   };
-
+  
   public render(): React.ReactElement<IHelloMsGraphProps> {
     return (
       <div className={styles.HelloMSGraph} >
@@ -43,7 +45,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
       </div>
     );
   }
-  
+
   public componentDidMount(): void {
 
     this.props.graphClient
@@ -64,6 +66,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
         this.setState({ image: blobUrl });
       });
   }
+  
   
   
 }
