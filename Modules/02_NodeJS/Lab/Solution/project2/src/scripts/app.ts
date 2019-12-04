@@ -5,7 +5,7 @@ import { QuoteManager } from './quote-manager';
 
 import './../css/app.css'
 
-$(() => {
+$( () => {
 
   var displayNewQuote = (): void => {
     var quote: Quote = QuoteManager.getQuote();
@@ -13,7 +13,7 @@ $(() => {
     $("#author").text(quote.author);
   };
 
-  $("#new-quote").click(() => {
+  $("#new-quote").click( ()=> {
     displayNewQuote();
   });
 
