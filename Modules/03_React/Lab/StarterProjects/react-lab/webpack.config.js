@@ -2,7 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/index.tsx',
@@ -14,7 +14,7 @@ module.exports = {
         extensions: ['.js', '.json', '.ts', '.tsx'],
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['dist'] }),
         new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
         new CopyWebpackPlugin([{ from: './src/favicon.ico', to: 'favicon.ico' }])
     ],

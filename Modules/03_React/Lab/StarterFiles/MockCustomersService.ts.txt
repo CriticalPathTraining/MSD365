@@ -1,6 +1,6 @@
 import ICustomer from "./../models/ICustomer"
 import ICustomerDetail from "../models/ICustomerDetail";
-import ICustomerService from "../models/ICustomerService";
+import ICustomerService from "../models/ICustomersService";
 
 export default class MockCustomersService implements ICustomerService {
 
