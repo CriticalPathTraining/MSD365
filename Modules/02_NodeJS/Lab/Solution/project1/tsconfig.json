@@ -5,10 +5,7 @@
     "preserveConstEnums": true,
     "outFile": "./dist/scripts/app.js",
     "sourceMap": true,
-    "lib": [
-      "dom",
-      "es6"
-    ]
+    "lib": [ "dom", "es6" ]
   },
   "files": [
     "./src/scripts/app.ts"

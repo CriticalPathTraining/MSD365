@@ -10,12 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/jquery": "^3.3.5",
-    "browser-sync": "^2.24.6",
+    "@types/jquery": "^3.3.31",
+    "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-typescript": "^5.0.0-alpha.3",
-    "typescript": "^3.0.1"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.7.2"
   }
 }

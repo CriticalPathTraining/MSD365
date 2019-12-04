@@ -9,7 +9,7 @@ var QuoteManager = (function () {
     function QuoteManager() {
     }
     QuoteManager.quotes = [
-        new Quote("Always borrow money from a pessimist. He won?t expect it back.", "Oscar Wilde"),
+        new Quote("Always borrow money from a pessimist. He won’t expect it back.", "Oscar Wilde"),
         new Quote("Behind every great man is a woman rolling her eyes.", "Jim Carrey"),
         new Quote("In Hollywood a marriage is a success if it outlasts milk.", "Rita Rudner"),
         new Quote("Between two evils, I always pick the one I never tried before.", "Mae West"),
@@ -23,7 +23,7 @@ var QuoteManager = (function () {
         new Quote("I haven't spoken to my wife in years. I didn't want to interrupt her.", "Rodney Dangerfield"),
         new Quote("You know you have a drinking problem when the bartender knows your name -- and you've never been to that bar before.", "Zach Galifianakis"),
         new Quote("No man has a good enough memory to be a successful liar", "Abraham Lincoln"),
-        new Quote("I love deadlines. I like the whooshing sounds they make as they fly by.", "Douglas Adams")
+        new Quote("I love deadlines. I like to whooshing sounds they make as they fly by.", "Douglas Adams")
     ];
     QuoteManager.getQuote = function () {
         var index = Math.floor(Math.random() * QuoteManager.quotes.length);
