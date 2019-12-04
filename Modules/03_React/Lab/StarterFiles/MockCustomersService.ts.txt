@@ -31,7 +31,7 @@ export default class MockCustomersService implements ICustomerService {
             "HomePhone": customer.HomePhone
         });
 
-        let filteredCustomers = customersWithOutDetail.filter(customer => customer.LastName.startsWith(lastNameSearch))!;
+        let filteredCustomers = customersWithOutDetail.filter(customer => customer.LastName.toLowerCase().startsWith(lastNameSearch.toLowerCase()))!;
 
         return Promise.resolve(filteredCustomers);
     }
