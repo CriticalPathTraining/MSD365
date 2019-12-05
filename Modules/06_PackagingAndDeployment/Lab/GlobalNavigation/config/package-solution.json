@@ -6,7 +6,7 @@
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "iconPath": "assets/AppIcon.png",
-    "skipFeatureDeployment": true,
+    "skipFeatureDeployment": false,
     "isDomainIsolated": false,
     "features": [
       {
