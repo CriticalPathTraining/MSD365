@@ -1,4 +1,4 @@
-## customer-search
+## customersearch
 
 This is where you include your WebPart documentation.
 

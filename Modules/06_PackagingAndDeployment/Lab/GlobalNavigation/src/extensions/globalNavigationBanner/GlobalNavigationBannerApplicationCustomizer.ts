@@ -6,7 +6,7 @@ import {
   PlaceholderName
 } from '@microsoft/sp-application-base';
 
-import styles from './GlobalNavigationApplicationCustomizer.module.scss';
+import styles from './GlobalNavigationBannerApplicationCustomizer.module.scss';
 
 
 export interface IGlobalNavigationApplicationCustomizerProperties {
@@ -24,10 +24,12 @@ const globalNavigationLinks: IGlobalNavigationLink[] = [
   { url: "https://github.com/CriticalPathTraining/MSD365", caption: "MSD365 on GitHub" }
 ];
 
-export default class GlobalNavigationApplicationCustomizer
+
+/** A Custom Action which can be run during execution of a Client Side Application */
+export default class GlobalNavigationBannerApplicationCustomizer
   extends BaseApplicationCustomizer<IGlobalNavigationApplicationCustomizerProperties> {
 
-  private GlobalNavigation: PlaceholderContent | undefined;
+    private GlobalNavigation: PlaceholderContent | undefined;
 
   private RenderGlobalNavigation(): void {
     console.log("RenderGlobalNavigation executing...");

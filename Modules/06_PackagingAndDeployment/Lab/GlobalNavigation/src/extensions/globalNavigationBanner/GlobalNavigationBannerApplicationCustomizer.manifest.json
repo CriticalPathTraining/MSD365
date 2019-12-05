@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
-  "id": "40327344-9731-4137-9a47-1c2ebf8812cf",
-  "alias": "GlobalNavigationApplicationCustomizer",
+  "id": "7e1c62dd-5ccc-4e27-8ffe-883ad288c74c",
+  "alias": "GlobalNavigationBannerApplicationCustomi",
   "componentType": "Extension",
   "extensionType": "ApplicationCustomizer",
   "version": "*",

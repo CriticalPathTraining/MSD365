@@ -2,10 +2,11 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.5.1",
-    "libraryName": "customer-search",
-    "libraryId": "d6c9aa37-2d69-4426-b373-7141797a3536",
+    "version": "1.9.1",
+    "libraryName": "customersearch",
+    "libraryId": "03c5cae9-12b6-4959-858d-3104980328b5",
     "packageManager": "npm",
+    "isDomainIsolated": false,
     "componentType": "webpart"
   }
 }

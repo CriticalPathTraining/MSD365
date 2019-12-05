@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "global-navigation-application-customizer": {
+    "global-navigation-banner-application-customizer": {
       "components": [
         {
-          "entrypoint": "./lib/extensions/globalNavigation/GlobalNavigationApplicationCustomizer.js",
-          "manifest": "./src/extensions/globalNavigation/GlobalNavigationApplicationCustomizer.manifest.json"
+          "entrypoint": "./lib/extensions/globalNavigationBanner/GlobalNavigationBannerApplicationCustomizer.js",
+          "manifest": "./src/extensions/globalNavigationBanner/GlobalNavigationBannerApplicationCustomizer.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "GlobalNavigationApplicationCustomizerStrings": "lib/extensions/globalNavigation/loc/{locale}.js"
+    "GlobalNavigationBannerApplicationCustomizerStrings": "lib/extensions/globalNavigationBanner/loc/{locale}.js"
   }
 }
