@@ -2,9 +2,9 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.8.1",
+    "version": "1.9.1",
     "libraryName": "spfx-extension-lab",
-    "libraryId": "7fc3b0c1-0155-4b0e-802e-9a3bff0b7e63",
+    "libraryId": "686bdd9a-08dc-49bb-8108-08a5badf5f90",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "extension",

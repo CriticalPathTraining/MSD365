@@ -2,12 +2,11 @@ import * as React from 'react';
 import styles from './LeadTracker.module.scss';
 import { ILeadTrackerProps } from './ILeadTrackerProps';
 import { ILeadTrackerState } from './ILeadTrackerState';
-import { escape } from '@microsoft/sp-lodash-subset';
 
-import ILead from '../../../models/ILead'
-import IList from '../../../models/IList'
-import ILeadsService from '../../../models/ILeadsService'
-import MockLeadsService from '../../../services/MockLeadsService'
+import ILead from '../../../models/ILead';
+import IList from '../../../models/IList';
+import ILeadsService from '../../../models/ILeadsService';
+import MockLeadsService from '../../../services/MockLeadsService';
 import SharePointLeadsService from '../../../services/SharePointLeadsService';
 
 import {
@@ -26,12 +25,11 @@ const leadColumns: IColumn[] = [
 
 export default class LeadTracker extends React.Component<ILeadTrackerProps, ILeadTrackerState> {
 
-  //private leadsService: ILeadsService = new MockLeadsService();
-  private leadsService: ILeadsService = 
-          new SharePointLeadsService(this.props.spHttpClient, this.props.siteUrl);
+  private leadsService: ILeadsService =
+    new SharePointLeadsService(this.props.spHttpClient, this.props.siteUrl);
 
   public state: ILeadTrackerState = {
-    targetList: this.props.targetListDefault,
+    targetList: this.props.targetList,
     loading: false,
     leads: []
   };
@@ -54,14 +52,15 @@ export default class LeadTracker extends React.Component<ILeadTrackerProps, ILea
   
       </div>
     );
-  } 
-
+  }
+   
   componentDidMount() {
+    console.log("componentDidMount", this.props.targetList);
     this.leadsService.getLeads(this.state.targetList).then((leads: ILead[]) => {
       this.setState({ leads: leads });
-    })
+    });
   }
-
+  
   public componentDidUpdate(prevProps: ILeadTrackerProps, prevState: ILeadTrackerState, prevContext: any): void {
     if (prevState.targetList != this.state.targetList) {
       this.setState({ loading: true });
@@ -70,6 +69,5 @@ export default class LeadTracker extends React.Component<ILeadTrackerProps, ILea
       });
     }
   }
-  
   
 }

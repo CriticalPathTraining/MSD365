@@ -20,7 +20,7 @@ export default class MyFirstExtensionApplicationCustomizer
     this.RenderPlaceHolders();
     return Promise.resolve<void>();
   }
-  
+
   private RenderPlaceHolders(): void {
 
     if (!this.PageHeader) {

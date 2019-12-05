@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "6b8a90de-e51a-48c8-aedc-26367a54c8ba",
+  "id": "41091c25-bae0-485b-abb5-7d50a90c0ace",
   "alias": "LeadTrackerWebPart",
   "componentType": "WebPart",
   "version": "*",
@@ -11,10 +11,10 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Other" },
     "title": { "default": "Lead Tracker" },
-    "description": { "default": "A React webpart for tracking leads in SharePoint" },
+    "description": { "default": "a lead tracker webpart" },
     "officeFabricIconFontName": "ContactCard",
     "properties": {
       "targetList": ""
     }
-  }]
+  }]  
 }

@@ -1,7 +1,11 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+
+import {
+  BaseClientSideWebPart,
+} from '@microsoft/sp-webpart-base';
+
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
@@ -9,23 +13,20 @@ import {
   IPropertyPaneDropdownOption
 } from '@microsoft/sp-property-pane';
 
+import IList from '../../models/IList';
+import ILeadsService from '../../models/ILeadsService';
+import SharePointLeadsService from '../../services/SharePointLeadsService';
+
 import * as strings from 'LeadTrackerWebPartStrings';
 import LeadTracker from './components/LeadTracker';
 import { ILeadTrackerProps } from './components/ILeadTrackerProps';
 
 import { SPHttpClient } from '@microsoft/sp-http';
 
-import IList from '../../models/IList';
-import ILeadsService from '../../models/ILeadsService';
-import SharePointLeadsService from '../../services/SharePointLeadsService';
-
-export interface ILeadTrackerWebPartProps {
-  targetList: string;
-}
-
-export default class LeadTrackerWebPart extends BaseClientSideWebPart<ILeadTrackerWebPartProps> {
+export default class LeadTrackerWebPart extends BaseClientSideWebPart<ILeadTrackerProps> {
 
   private leadTracker: LeadTracker;
+
   private listOptions: IPropertyPaneDropdownOption[];
   private listsFetched: boolean = false;
 
@@ -45,23 +46,6 @@ export default class LeadTrackerWebPart extends BaseClientSideWebPart<ILeadTrack
       return options;
     });
   }
-  
-
-  public render(): void {
-    const element: React.ReactElement<ILeadTrackerProps> = React.createElement(
-      LeadTracker, {
-        targetListDefault: this.properties.targetList,
-        siteUrl: this.context.pageContext.web.absoluteUrl,
-        spHttpClient: <SPHttpClient>this.context.spHttpClient
-      }
-    );
-    this.leadTracker = <LeadTracker>ReactDom.render(element, this.domElement);
-  }
-
-
-  protected onDispose(): void {
-    ReactDom.unmountComponentAtNode(this.domElement);
-  }
 
   protected onPropertyPaneConfigurationStart(): void {
     if (this.listsFetched) {
@@ -75,17 +59,33 @@ export default class LeadTrackerWebPart extends BaseClientSideWebPart<ILeadTrack
     });
   }
   
+  
+
+  public render(): void {
+    console.log("render: ", this.properties.targetList);
+    const element: React.ReactElement<ILeadTrackerProps> = React.createElement(
+      LeadTracker, {
+      targetList: this.properties.targetList,
+      siteUrl: this.context.pageContext.web.absoluteUrl,
+      spHttpClient: <SPHttpClient>this.context.spHttpClient
+    }
+    );
+    this.leadTracker = <LeadTracker>ReactDom.render(element, this.domElement);
+  }
+
+  protected onDispose(): void {
+    ReactDom.unmountComponentAtNode(this.domElement);
+  }
+
+  protected get dataVersion(): Version {
+    return Version.parse('1.0');
+  }
 
   protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
     super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
     if (propertyPath === 'targetList' && newValue) {
       this.leadTracker.setState({ targetList: newValue });
     }
-  }
-
-
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
