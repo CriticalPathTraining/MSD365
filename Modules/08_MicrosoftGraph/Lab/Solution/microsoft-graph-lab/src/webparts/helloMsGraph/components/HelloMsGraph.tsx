@@ -18,16 +18,15 @@ export interface IHelloMsGraphState {
 }
 
 
-
 export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IHelloMsGraphState> {
- 
+
   public state = {
     name: '',
     email: '',
     phone: '',
     image: ''
   };
-  
+
   public render(): React.ReactElement<IHelloMsGraphProps> {
     return (
       <div className={styles.HelloMSGraph} >
@@ -45,7 +44,7 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
       </div>
     );
   }
-
+  
   public componentDidMount(): void {
 
     this.props.graphClient
@@ -65,8 +64,6 @@ export default class HelloMsGraph extends React.Component<IHelloMsGraphProps, IH
         const blobUrl = window.URL.createObjectURL(photoResponse);
         this.setState({ image: blobUrl });
       });
-  }
-  
-  
-  
+  }  
+
 }

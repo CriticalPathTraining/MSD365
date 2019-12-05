@@ -1,8 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
+    "title": "Microsoft Graph Lab",
     "name": "microsoft-graph-lab",
-    "id": "f68f5ac1-680f-487d-a888-8e345a122979",
+    "id": "5476344b-35fe-4141-8de9-14cc42be916c",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -16,9 +17,12 @@
         "resource": "Microsoft Graph",
         "scope": "User.ReadBasic.All"
       }
-    ]    
+    ]
   },
   "paths": {
     "zippedPackage": "solution/microsoft-graph-lab.sppkg"
   }
 }
+
+
+

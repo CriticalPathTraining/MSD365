@@ -1,14 +1,13 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-
-import { MSGraphClient } from '@microsoft/sp-http';
-
 import { Version } from '@microsoft/sp-core-library';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {
+  BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
+} from '@microsoft/sp-webpart-base';
+
+import { MSGraphClient } from '@microsoft/sp-http';
 
 import * as strings from 'HelloMsGraphWebPartStrings';
 import HelloMsGraph from './components/HelloMsGraph';
@@ -32,7 +31,6 @@ export default class HelloMsGraphWebPart extends BaseClientSideWebPart<IHelloMsG
       });
   }
   
-
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
