@@ -1,4 +1,4 @@
-## microsoft-graph-lab
+## microsoft-graph-demo-webparts
 
 This is where you include your WebPart documentation.
 

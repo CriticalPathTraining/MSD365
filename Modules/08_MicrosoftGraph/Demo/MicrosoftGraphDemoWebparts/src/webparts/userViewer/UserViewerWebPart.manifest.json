@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "ea45cded-33c8-412c-96bd-5fffb2f0c88d",
+  "alias": "UserViewerWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "SharePointFullPage"],
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Critical Path Training" },
+    "title": { "default": "User Viewer" },
+    "description": { "default": "A demo webpart for CPT lab exercises" },
+    "officeFabricIconFontName": "Group",
+    "properties": {}
+  }]
+}

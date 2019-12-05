@@ -4,7 +4,6 @@ import IUsersService from "../models/IUsersService";
 import { MSGraphClient } from '@microsoft/sp-http';
 import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
 
-
 export default class MSGraphUsersService implements IUsersService {
 
   constructor(private msGraphClient: MSGraphClient) { }
