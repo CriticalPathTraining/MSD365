@@ -1,7 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "global-navigation-client-side-solution",
+    "title": "Global Navigation",
+    "name": "global-navigation",
     "id": "0a1fbd20-0e17-474c-8797-844e9adc5cfd",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
