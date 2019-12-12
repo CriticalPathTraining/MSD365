@@ -1,0 +1,58 @@
+﻿body {
+  width: 1024px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background-color: orange;
+}
+
+.page-width {
+  background-color: white;
+  min-height: 720px;
+  padding: 0px;
+}
+
+.page-banner {
+  background-color: black;
+  height: 48px;
+  padding-left: 56px;
+  background-image: url(./img/AppIcon.png);
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+
+  .page-banner h2 {
+    color: white;
+    margin: 0;
+    height: 32px;
+    font-size: 40px;
+
+  }
+
+
+.page-content{
+  padding-left: 12px;
+  font-size: 24px;
+}
+
+table, table td {
+  border-collapse: collapse
+}
+
+table td {
+  padding: 4px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#tab-content {
+  margin: 0;
+  padding: 16px;
+  padding-top: 12px;
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "id": "22d8e7e0-1bc1-11ea-aa36-578cfc8446ba",
+  "version": "0.0.1",
+  "packageName": "reactcustomtabs",
+  "developer": {
+    "name": "Acme Corp",
+    "websiteUrl": "https://{{HOSTNAME}}",
+    "privacyUrl": "https://{{HOSTNAME}}/privacy.html",
+    "termsOfUseUrl": "https://{{HOSTNAME}}/tou.html"
+  },
+  "name": {
+    "short": "react custom tabs",
+    "full": "react custom tabs"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://{{HOSTNAME}}/customReactTab/config.html",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "{{HOSTNAME}}"
+  ]
+}

@@ -24,7 +24,9 @@
 
   <script type="text/javascript">
 
-    var baseUrl = "https://f5faab98.ngrok.io/"
+    var baseUrl = window.location.origin;
+
+    console.log(baseUrl);
 
     microsoftTeams.initialize();
     microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {

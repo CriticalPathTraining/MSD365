@@ -3,4 +3,4 @@ To begin ngrok session for localhost
 
 ngrok http 3333 -host-header="localhost:3333"
 
-ngrok http 63205 -host-header="localhost:63205"
+ngrok http 60232 -host-header=localhost:60232 --hostname=https://cptlabs.ngrok.io

@@ -27,7 +27,7 @@
     {
       "entityId": "ctp.helloWorldTeamsTabs.statictab1",
       "name": "Hello Tab 1",
-      "contentUrl": "https://f5faab98.ngrok.io/StaticTab1.html",
+      "contentUrl": "https://cptlabs.ngrok.io/StaticTab1.html",
       "scopes": [
         "personal"
       ]
@@ -35,7 +35,7 @@
     {
       "entityId": "ctp.helloWorldTeamsTabs.statictab2",
       "name": "Hello Tab 2",
-      "contentUrl": "https://f5faab98.ngrok.io/StaticTab2.html",
+      "contentUrl": "https://cptlabs.ngrok.io/StaticTab2.html",
       "scopes": [
         "personal"
       ]
@@ -44,7 +44,7 @@
   ],
   "configurableTabs": [
     {
-      "configurationUrl": "https://f5faab98.ngrok.io/Configure.html",
+      "configurationUrl": "https://cptlabs.ngrok.io/Configure.html",
       "canUpdateConfiguration": true,
       "scopes": [
         "team"

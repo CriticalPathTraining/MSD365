@@ -1,0 +1,58 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0.0",
+  "id": "00000000-0000-0000-0000-000000000042",
+  "packageName": "CptTeamsTabsApp",
+  "developer": {
+    "name": "Critical Path Training",
+    "websiteUrl": "https://www.criticalpathtraining.com",
+    "privacyUrl": "https://www.criticalpathtraining.com",
+    "termsOfUseUrl": "https://www.criticalpathtraining.com"
+  },
+  "name": {
+    "short": "CPT Tabs",
+    "full": "CPT Teams Tabs App"
+  },
+  "description": {
+    "short": "CPT Teams Tabs Development Demo",
+    "full": "Critical Path Training sample app demonstrating how to develop custom tabs for Microsoft Teams."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#9F1B30",
+  "staticTabs": [
+    {
+      "entityId": "cptlabs.statictab1",
+      "name": "Static Tab 1",
+      "contentUrl": "https://cptlabs.ngrok.io/StaticTab1.html",
+      "scopes": [ "personal" ]
+    },
+    {
+      "entityId": "cptlabs.statictab2",
+      "name": "Static Tab 2",
+      "contentUrl": "https://cptlabs.ngrok.io/StaticTab2.html",
+      "scopes": [ "personal" ]
+    }
+
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://cptlabs.ngrok.io/Configure.html",
+      "canUpdateConfiguration": true,
+      "scopes": [ "team", "groupchat" ]
+    }
+  ],
+   "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "cptlabs.ngrok.io",
+    "cptteams.azurewebsites.net",
+    "www.google.com",
+    "www.bing.com"
+  ]
+}
