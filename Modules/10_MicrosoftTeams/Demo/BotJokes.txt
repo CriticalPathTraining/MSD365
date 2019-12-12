@@ -1,0 +1,12 @@
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken) {
+      if (turnContext.Activity.Text.Contains("quote", System.StringComparison.CurrentCultureIgnoreCase)) {
+        string responseText = "A duck walks into a bar....";
+        Activity responseActivity = MessageFactory.Text(responseText);
+        await turnContext.SendActivityAsync(responseActivity, cancellationToken);
+      }
+      else {
+        string responseText = $"Here is what you said: {turnContext.Activity.Text}";
+        Activity responseActivity = MessageFactory.Text(responseText);
+        await turnContext.SendActivityAsync(responseActivity, cancellationToken);
+      }
+    }

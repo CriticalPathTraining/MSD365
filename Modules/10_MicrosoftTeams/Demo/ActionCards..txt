@@ -1,0 +1,15 @@
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken) {
+
+      var reply = MessageFactory.Text("What is your favorite color? ");
+
+      reply.SuggestedActions = new SuggestedActions() {
+        Actions = new List<CardAction>()
+          {
+            new CardAction() { Title = "Red", Type = ActionTypes.ImBack, Value = "Red" },
+            new CardAction() { Title = "Yellow", Type = ActionTypes.ImBack, Value = "Yellow" },
+            new CardAction() { Title = "Blue", Type = ActionTypes.ImBack, Value = "Blue" },
+        },
+      };
+      await turnContext.SendActivityAsync(reply, cancellationToken);
+
+    }
