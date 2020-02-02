@@ -11,10 +11,10 @@ $template = "STS#3"
 New-SPOSite -Url $urlNewSite -Owner $owner -Title $siteTitle -StorageQuota $quota -Template $template
 
 # get info about new team site
-Get-SPOSite -Identity $url | select *
+Get-SPOSite -Identity $urlNewSite | select *
 
 # update title with next text value
-Set-SPOSite -Identity $url -Title "A New and Better Title"
+Set-SPOSite -Identity $urlNewSite -Title "A New and Better Title"
 
 # open new site in browser
 Start-Process $urlNewSite
