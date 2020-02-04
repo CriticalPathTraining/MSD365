@@ -1,24 +1,22 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "title": "Global Navigation",
     "name": "global-navigation",
-    "id": "0a1fbd20-0e17-474c-8797-844e9adc5cfd",
+    "id": "ae9f50b8-edc0-46f4-9a35-050ae9444f63",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
-    "iconPath": "assets/AppIcon.png",
-    "skipFeatureDeployment": false,
+    "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "features": [
       {
-        "title": "Feature to activate a global navigation banner",
-        "description": "Deploys a banner with a global navigation menu",
-        "id": "2e334413-27e4-4555-91f8-c8e923e655d8",
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "a1f8d95d-b558-48b2-b723-cf91ff0a9227",
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
             "elements.xml",
-            "clientsideinstance.xml"
+            "ClientSideInstance.xml"
           ]
         }
       }

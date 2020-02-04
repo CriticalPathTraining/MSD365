@@ -3,7 +3,7 @@
     <CustomAction
         Title="GlobalNavigationBanner"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ClientSideComponentId="7e1c62dd-5ccc-4e27-8ffe-883ad288c74c"
+        ClientSideComponentId="0e1511b6-4cdb-4926-8181-8808b7630017"
         ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </CustomAction>
 </Elements>

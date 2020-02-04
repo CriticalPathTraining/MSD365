@@ -2,9 +2,9 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.9.1",
+    "version": "1.10.0",
     "libraryName": "global-navigation",
-    "libraryId": "0a1fbd20-0e17-474c-8797-844e9adc5cfd",
+    "libraryId": "ae9f50b8-edc0-46f4-9a35-050ae9444f63",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "extension",

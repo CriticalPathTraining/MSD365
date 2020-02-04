@@ -4,9 +4,9 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://msd365tenant.sharepoint.com",
       "customActions": {
-        "7e1c62dd-5ccc-4e27-8ffe-883ad288c74c": {
+        "0e1511b6-4cdb-4926-8181-8808b7630017": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"
@@ -15,9 +15,9 @@
       }
     },
     "globalNavigationBanner": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://msd365tenant.sharepoint.com",
       "customActions": {
-        "7e1c62dd-5ccc-4e27-8ffe-883ad288c74c": {
+        "0e1511b6-4cdb-4926-8181-8808b7630017": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"
