@@ -4,9 +4,9 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://msd365tenant.sharepoint.com",
+      "pageUrl": "https://msd365tenant.sharepoint.com/",
       "customActions": {
-        "0e1511b6-4cdb-4926-8181-8808b7630017": {
+        "c3555bbc-1c64-48ad-97e5-fec284f5344b": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"
@@ -15,9 +15,9 @@
       }
     },
     "globalNavigationBanner": {
-      "pageUrl": "https://msd365tenant.sharepoint.com",
+      "pageUrl": "https://msd365tenant.sharepoint.com/",
       "customActions": {
-        "0e1511b6-4cdb-4926-8181-8808b7630017": {
+        "c3555bbc-1c64-48ad-97e5-fec284f5344b": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"

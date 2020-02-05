@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "global-navigation",
-    "id": "ae9f50b8-edc0-46f4-9a35-050ae9444f63",
+    "name": "global-navigation-client-side-solution",
+    "id": "04636c43-eba4-4f31-8d6b-a66d362f825b",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -11,7 +11,7 @@
       {
         "title": "Application Extension - Deployment of custom action.",
         "description": "Deploys a custom action with ClientSideComponentId association",
-        "id": "a1f8d95d-b558-48b2-b723-cf91ff0a9227",
+        "id": "7f679ec3-d35d-4d16-ad2b-fc0bfd65f20d",
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [

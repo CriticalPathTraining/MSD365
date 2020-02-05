@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "title": "Customer Search",
+    "title": "Customer Seach",
     "name": "customer-search",
-    "id": "03c5cae9-12b6-4959-858d-3104980328b5",
+    "iconPath": "assets/AppIcon.png",
+    "id": "aadd99db-2595-4073-a4c4-619e821c6087",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
-    "iconPath": "assets/AppIcon.png",
     "skipFeatureDeployment": true,
     "isDomainIsolated": false
   },
   "paths": {
-    "zippedPackage": "solution/customersearch.sppkg"
+    "zippedPackage": "solution/customer-search.sppkg"
   }
 }
